@@ -4,7 +4,7 @@ class Circle:
     def __init__(self, radius):
         self._radius = None
 
-        self.radius = radius #this is set using the setter function
+        self.radius = radius #this calls, and, is set using the setter function
 
 
     # getter function
@@ -31,9 +31,15 @@ class Circle:
             self.radius = new_diameter / 2
         else:
             print(f"diameter must be a number greater than zero, not {new_diameter}")
+
+
+    def __repr__(self):
+        return f'<Circle r={self.radius} d={self.diameter}>'
     
 c1 = Circle(2)
 
 c1.diameter = 8.5
 
-print(c1.radius)
+c1.radius = 10
+
+print(c1)
